@@ -1,117 +1,33 @@
-import React, { Suspense, lazy, useState, useCallback } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from 'react-router-dom';
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from 'react-scroll';
+import React, {
+  Suspense,
+  useCallback,
+  useState,
+  useEffect,
+  createRef,
+  useLayoutEffect,
+} from 'react';
+
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './assets/css/App.css';
 
+import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
+import Project from './components/Project';
+import Contact from './components/Contact';
 
-// const ScrollLink = Scroll.ScrollLink;
-
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-const NavBar = () => {
-  return (
-    <nav className='topNavbar'>
-      <h3>
-        Farhan <span>Hilmi</span>
-      </h3>
-      <ul>
-        <li>
-          <Link
-            activeClass='active'
-            to='home'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass='active'
-            to='about'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass='active'
-            to='services'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass='active'
-            to='projects'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass='active'
-            to='journey'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            My Journey
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass='active'
-            to='contact'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};
+import { useWindowSize, useHeightNavbar } from './hooks/useResize';
 
 function App() {
+  const [width, height] = useWindowSize();
+  console.log('Height: ', height);
+  console.log('width: ', width);
+  // const divRef = createRef();
+  // const dimensions = useRefDimensions(divRef);
+  // console.log(`Width: ${dimensions.width}, height: ${dimensions.height}`);
+
   return (
     // <Router>
     //   <Suspense fallback={<div>Loading...</div>}>
@@ -130,6 +46,8 @@ function App() {
         <Home />
         <About />
         <Services />
+        <Project />
+        <Contact />
       </main>
       {/* <Switch> */}
       {/* <Route path='/about'>
@@ -143,8 +61,18 @@ function App() {
           </Route> */}
       {/* </Switch> */}
     </div>
+
     // </Router>
   );
 }
+
+window.addEventListener('scroll', (e) => {
+  const nav = document.querySelector('#navBar');
+  if (window.pageYOffset > 0) {
+    nav.classList.add('addShadow');
+  } else {
+    nav.classList.remove('addShadow');
+  }
+});
 
 export default App;

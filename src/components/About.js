@@ -16,11 +16,32 @@ const LeftSide = () => {
         believe in what I do, curious about in many things, and always trying to
         improve the quality of my work.
       </p>
+      <button className='btn cv hidden'>
+        <i className='fas fa-file '></i>Download CV
+      </button>
       <div className='about-button-social'>
-        <button className='btn'>
+        <button
+          className='btn'
+          onClick={() =>
+            window.open(
+              'https://github.com/farhanhilmi',
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        >
           <i className='fab fa-github fa-lg'></i>Github
         </button>
-        <button className='btn'>
+        <button
+          className='btn'
+          onClick={() =>
+            window.open(
+              'https://www.linkedin.com/in/farhan-hilmi/',
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        >
           <i className='fab fa-linkedin fa-lg'></i>LinkedIn
         </button>
       </div>

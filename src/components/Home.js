@@ -14,7 +14,19 @@ const LeftSide = () => {
           best solution for your problem.
         </p>
       </div>
-      <button className='btn text-underline'>Let's chat with me</button>
+      <button
+        className='btn text-underline'
+        onClick={() =>
+          window.open(
+            // 'https://wa.me/6289668872106',
+            'https://t.me/frhnmii',
+            '_blank',
+            'noopener noreferrer',
+          )
+        }
+      >
+        Let's chat with me
+      </button>
     </section>
   );
 };
@@ -35,5 +47,8 @@ function Home() {
     </section>
   );
 }
+
+// const heightNavbar = document.getElementById('navBar').offsetHeight;
+// console.log(heightNavbar);
 
 export default Home;

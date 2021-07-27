@@ -19,37 +19,55 @@
 body {
   background: #222222;
   font-family: 'JetBrains Mono', monospace;
+  position: relative;
 }
 
 header {
   width: 100%;
-  /* height: 53px; */
+  height: 53px;
   /* background-color: red; */
-  /* position: fixed;
-top: 0; */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: var(--blackShades);
 }
 
 main {
   width: 100%;
+  margin-top: 53px;
+}
+
+.addShadow {
+  box-shadow:
+    6.22px 6.22px 18.67px #252b25,
+    -6.22px -6.22px 18.67px #293430;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .topNavbar {
   /* background: yellow; */
-  padding: 1rem 6rem;
+  padding: 0.7rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
 }
 
-.topNavbar h3 {
+.topNavbar .homeName {
   color: var(--whiteShades);
   font-size: 24px;
   font-weight: 800;
 }
 
-.topNavbar h3 span {
+.topNavbar .homeName span {
   color: var(--greyShades);
+}
+
+.topNavbar a {
+  cursor: pointer;
 }
 
 .topNavbar a.active {
@@ -131,7 +149,8 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  height: 100vh;
+  /* height: 100vh; */
+  /* background: yellow; */
 }
 
 .home-section .one {
@@ -183,11 +202,11 @@ main {
 }
 
 .about-section {
-  padding-top: 4rem;
+  padding-top: 8rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .about-section .one {
@@ -271,20 +290,28 @@ main {
   margin-bottom: 50px;
 }
 
-.about-section .one .about-button-social {
+.about-section .one .cv {
+  margin-bottom: 30px;
+}
+
+.about-section .one .about-button-social,
+.about-section .one .cv {
   font-family: 'Rubik', sans-serif !important;
   display: flex;
 }
 
-.about-section .one .about-button-social button {
+.about-section .one .about-button-social button,
+.about-section .one .cv {
   color: var(--whiteShades);
 }
 
-.about-section .one .about-button-social button:hover {
+.about-section .one .about-button-social button:hover,
+.about-section .one button.cv:hover {
   color: var(--green);
 }
 
-.about-section .one .about-button-social button i {
+.about-section .one .about-button-social button i,
+.about-section .one .cv i {
   margin-right: 16px;
   /* color: var(--whiteShades); */
 }
@@ -331,8 +358,8 @@ main {
 }
 
 .services-section {
-  padding-top: 4rem;
-  height: 100vh;
+  padding-top: 8rem;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -429,4 +456,297 @@ main {
   line-height: 16px;
   text-align: center;
   color: var(--greyShades);
+}
+
+.project-section {
+
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-section .listProject {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+.project-section .listProject .cardProject {
+  width: 428px;
+  height: 410px;
+  box-shadow: 6.22px 6.22px 18.67px #000000, -6.22px -6.22px 18.67px #293430;
+  border-radius: 24px;
+}
+
+.project-section .listProject .cardProject div:first-child {
+  width: 100%;
+  height: 366px;
+  box-shadow: inset -12.45px -12.45px 31.12px #293430, inset 12.45px 12.45px 31.12px #000000;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.project-section .listProject .cardProject div:first-child img {
+  padding: 16px;
+  width: 92%;
+  border-radius: 24px;
+
+}
+
+.project-section .listProject .cardProject h4 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--greyShades);
+  margin-top: 7px;
+}
+
+.project-section button {
+  margin-top: 80px;
+  text-decoration: underline;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  padding: 8rem 115px;
+  /* height: 100vh; */
+  /* background: yellow; */
+}
+
+.contact-section .one,
+.contact-section .two {
+  color: var(--whiteShades);
+  font-family: 'Rubik', sans-serif;
+}
+
+.contact-section .one .title p,
+.contact-section .two .title p {
+  color: var(--green);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 12px;
+}
+
+.contact-section .one .title h2,
+.contact-section .two .title h2 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  margin-bottom: 40px;
+}
+
+.contact-section .one .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact-section .one .info img {
+  width: 36px;
+  height: 30px;
+  margin-right: 24px;
+}
+
+
+.contact-section .one .info div p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--greyShades);
+}
+
+.contact-section .one .info div h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.contact-section .two .form {
+  width: 350px;
+}
+
+.contact-section .two .form input,
+.contact-section .two .form textarea {
+  font-family: 'JetBrains Mono', monospace !important;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--whiteShades);
+  padding-left: 34px;
+  padding-right: 64px;
+}
+
+.contact-section .two .form input:focus,
+.contact-section .two .form textarea:focus {
+  /* outline: 2px solid var(--green) ; */
+  /* border-radius: ; */
+  /* box-shadow: inset 0 0 0 2pt red !important; */
+
+  outline: none;
+  border: 2px solid var(--green) !important;
+}
+
+.contact-section .two .form button {
+  font-family: 'JetBrains Mono', monospace !important;
+  width: 100%;
+}
+
+.contact-section .two .form .form-input {
+  margin-top: 16px;
+  position: relative;
+  width: 100%;
+  height: 65px;
+}
+
+.contact-section .two .form .form-input img {
+  position: absolute;
+  top: 24px;
+  right: -64px;
+  /* bottom: 2px;
+  right: 5px;
+  width: 24px;
+  height: 24px; */
+}
+
+.contact-section .two .form .form-input input,
+.contact-section .two .form .form-input textarea {
+  height: 100%;
+  background: #222222;
+  box-shadow: inset -12.45px -12.45px 31.12px #293430, inset 12.45px 12.45px 31.12px #000000;
+  border-radius: 8px;
+  border: none;
+}
+
+.contact-section .two .form .form-input textarea {
+  /* height: 142px; */
+  padding-top: 22px;
+}
+
+.contact-section .two .form .form-submit {
+  margin-top: 60px;
+  /* width: 10rem; */
+}
+
+.contact-section .two .form .form-submit button {
+  background: var(--blackShades);
+  color: var(--green);
+
+  /* Box Shadow */
+  box-shadow: -6.22302px -6.22302px 18.6691px #293430,
+    6.22302px 6.22302px 18.6691px #000000;
+
+  border-radius: 124.46px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+
+  padding: 12px 20px;
+  width: 10rem;
+  text-align: center;
+}
+
+.contact-section .two .form .form-submit button:hover {
+  box-shadow: -6.22302px -6.22302px 18.6691px rgb(48, 61, 56),
+    6.22302px 6.22302px 18.6691px #000000;
+  color: #FFFFFF;
+}
+
+.downloadCV {
+  box-shadow: -2.22px -2.22px 18.6691px #2F453D, 2.22px 2.22px 18.6691px #000000;
+  border-radius: 124.46px;
+  border-radius: 4px;
+  background: var(--green);
+  color: var(--blackShades) !important;
+  padding: 8px 16px !important;
+}
+
+.downloadCV:hover {
+  background: #7CE8AB;
+}
+
+.section-portfolio {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-portfolio .titleSection {
+  margin-bottom: 4rem;
+}
+
+.portfolio-list {
+  width: 75%;
+  box-shadow:
+    6.22px 6.22px 18.67px #000000,
+    -6.22px -6.22px 18.67px #293430;
+  border-radius: 24px;
+  margin-bottom: 60px;
+  display: flex;
+}
+
+.portfolio-list .img-portfolio {
+  margin-right: 32px;
+  width: 50rem;
+  height: 321px;
+  box-shadow: inset -12.45px -12.45px 31.12px #293430, inset 12.45px 12.45px 31.12px #000000;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-list .img-portfolio img {
+  height: 85%;
+  width: 85%;
+  border-radius: 16px;
+}
+
+.portfolio-list .body-portfolio {
+  width: 100%;
+  padding-right: 3rem;
+  margin-top: 24px;
+}
+
+.portfolio-list .body-portfolio h2 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+
+.portfolio-list .body-portfolio h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--whiteShades);
+  margin-bottom: 4px;
+  margin-top: 16px;
+}
+
+.portfolio-list .body-portfolio p {
+  /* width: 427px; */
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--greyShades);
+}
+
+.portfolio-list .body-portfolio .description-portfolio {
+  padding-bottom: 24px;
 }
