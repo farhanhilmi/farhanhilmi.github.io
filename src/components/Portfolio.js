@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import NavBar from './NavBar';
 
 import '../assets/css/App.css';
+import '../assets/css/mediaQuery.css';
 
 import projectItems from '../projectData';
 import Contact from './Contact';
@@ -50,6 +50,7 @@ const Portfolio = () => {
               />
             );
           })}
+          <h2 class='tagline'>Many amazing things are coming</h2>
         </section>
         <Contact />
       </main>

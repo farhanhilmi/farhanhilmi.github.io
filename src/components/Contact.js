@@ -1,6 +1,5 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import SweetAlert from 'react-bootstrap-sweetalert';
 
 import '../assets/css/App.css';
 import logoPhone from '../assets/logo/phone.png';

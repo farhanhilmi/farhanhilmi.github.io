@@ -1,4 +1,6 @@
 import '../assets/css/App.css';
+import '../assets/css/mediaQuery.css';
+
 import logoFrontEnd from '../assets/logo/frontend.png';
 import logoUX from '../assets/logo/ux.png';
 import logoBackEnd from '../assets/logo/code.png';

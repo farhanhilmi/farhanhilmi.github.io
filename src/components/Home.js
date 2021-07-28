@@ -1,4 +1,5 @@
 import '../assets/css/App.css';
+import logo from '../assets/img/ilustrasi.png';
 
 const LeftSide = () => {
   return (
@@ -17,12 +18,7 @@ const LeftSide = () => {
       <button
         className='btn text-underline'
         onClick={() =>
-          window.open(
-            // 'https://wa.me/6289668872106',
-            'https://t.me/frhnmii',
-            '_blank',
-            'noopener noreferrer',
-          )
+          window.open('https://t.me/frhnmii', '_blank', 'noopener noreferrer')
         }
       >
         Let's chat with me
@@ -34,7 +30,7 @@ const LeftSide = () => {
 const RightSide = () => {
   return (
     <section className='two'>
-      <h2>Right Side</h2>
+      <img src={logo} alt='' srcSet='' />
     </section>
   );
 };

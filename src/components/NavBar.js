@@ -2,11 +2,12 @@ import { Link as LinkPage, useLocation } from 'react-router-dom';
 
 import { Link } from 'react-scroll';
 
-const NavItemHome = () => {
+const NavItemHome = (closeNav) => {
   return (
-    <ul>
+    <ul className='nav-links'>
       <li>
         <Link
+          onClick={closeNav}
           activeClass='active'
           to='home'
           spy={true}
@@ -19,6 +20,7 @@ const NavItemHome = () => {
       </li>
       <li>
         <Link
+          onClick={closeNav}
           activeClass='active'
           to='about'
           spy={true}
@@ -31,6 +33,7 @@ const NavItemHome = () => {
       </li>
       <li>
         <Link
+          onClick={closeNav}
           activeClass='active'
           to='services'
           spy={true}
@@ -43,6 +46,7 @@ const NavItemHome = () => {
       </li>
       <li>
         <Link
+          onClick={closeNav}
           activeClass='active'
           to='projects'
           spy={true}
@@ -55,6 +59,7 @@ const NavItemHome = () => {
       </li>
       <li>
         <Link
+          onClick={closeNav}
           activeClass='active'
           to='contact'
           spy={true}
@@ -79,11 +84,13 @@ const NavItemHome = () => {
   );
 };
 
-const NavItemPortfolio = () => {
+const NavItemPortfolio = (closeNav) => {
   return (
-    <ul>
+    <ul className='nav-links'>
       <li>
-        <LinkPage to='/'>Back to home</LinkPage>
+        <LinkPage onClick={closeNav} to='/'>
+          Back to home
+        </LinkPage>
       </li>
 
       <li>
@@ -102,14 +109,45 @@ const NavItemPortfolio = () => {
 
 const NavBar = () => {
   const location = useLocation();
+
+  const closeNav = () => {
+    let checkBoxState = document.querySelector('#nav-check').checked;
+    if (checkBoxState) {
+      document.getElementsByTagName('header')[0].className = 'nav-normal';
+      document.querySelector('#nav-check').checked = false;
+
+      console.log('Buka');
+    }
+  };
+
+  const checkNav = () => {
+    if (document.querySelector('#nav-check').checked) {
+      document.getElementsByTagName('header')[0].className = 'nav-mobile';
+      console.log('yees');
+    } else {
+      document.getElementsByTagName('header')[0].className = 'nav-normal';
+      console.log('dadad noo');
+    }
+  };
+
   return (
     <nav className='topNavbar' id='navBar'>
+      <input type='checkbox' id='nav-check' onClick={checkNav} />
       <h3>
         <LinkPage to='/' className='homeName'>
           Farhan <span>Hilmi</span>
         </LinkPage>
       </h3>
-      {location.pathname === '/portfolio' ? NavItemPortfolio() : NavItemHome()}
+      <div class='nav-btn'>
+        <label for='nav-check'>
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      {location.pathname === '/portfolio'
+        ? NavItemPortfolio(closeNav)
+        : NavItemHome(closeNav)}
     </nav>
   );
 };

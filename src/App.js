@@ -1,15 +1,7 @@
-import React, {
-  Suspense,
-  useCallback,
-  useState,
-  useEffect,
-  createRef,
-  useLayoutEffect,
-} from 'react';
-
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './assets/css/App.css';
+import './assets/css/mediaQuery.css';
 
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -18,12 +10,7 @@ import Services from './components/Services';
 import Project from './components/Project';
 import Contact from './components/Contact';
 
-import { useWindowSize, useHeightNavbar } from './hooks/useResize';
-
 function App() {
-  const [width, height] = useWindowSize();
-  console.log('Height: ', height);
-  console.log('width: ', width);
   // const divRef = createRef();
   // const dimensions = useRefDimensions(divRef);
   // console.log(`Width: ${dimensions.width}, height: ${dimensions.height}`);
@@ -39,7 +26,7 @@ function App() {
     // </Router>
     // <Router>
     <div>
-      <header>
+      <header className='nav-normal'>
         <NavBar />
       </header>
       <main>

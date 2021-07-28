@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../assets/css/App.css';
 
@@ -39,7 +39,11 @@ const Project = () => {
         })}
       </div>
 
-      <Link to='/portfolio'>
+      <Link
+        to='/portfolio'
+        className='btnProj'
+        onClick={() => window.scrollTo(0, 0)}
+      >
         <button className='btn'>See more projects</button>
       </Link>
     </section>
