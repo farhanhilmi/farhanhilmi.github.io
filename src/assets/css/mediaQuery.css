@@ -100,7 +100,7 @@
   /*a  */
 }
 
-@media (min-width: 767px) and (max-width: 1137px) {
+@media (min-width: 767px) and (max-width: 1190px) {
   .topNavbar ul li a {
     padding: 4px 4px;
   }
@@ -116,20 +116,7 @@
   
 }
 
-@media (min-width: 900px) and (max-width:1024px) {
 
-  .project-section {
-    padding-top: 7rem;
-    padding-left: 5% !important;
-    padding-right: 10%;
-    width: 100%;
-    padding-bottom: 0;
-    /* height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 
 /* 
@@ -140,26 +127,29 @@
 @media (max-width: 480px) {
 
   main {
-
-    margin-top: 0;
+    margin-top: 7rem;
   }
 
   /* CSS */
   .home-section {
-    display: block;
-
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .home-section .two {
-    display: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+  }
+  .home-section .two img {
+    height: 7rem;
   }
 
   .home-section .one {
 
     display: block;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    margin-top: 35%;
+    margin-top: 4rem;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 10px;
@@ -680,16 +670,23 @@
 
   /* CSS */
   main {
-    margin-top: 0;
+    margin-top: 7rem;
   }
 
   /* CSS */
   .home-section {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .home-section .two {
-    display: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+  }
+  .home-section .two img {
+    height: 9rem;
   }
 
   .home-section .one {
@@ -697,7 +694,7 @@
     display: block;
     /* flex-direction: column; */
     /* align-items: center; */
-    margin-top: 35%;
+    margin-top: 4rem;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 10px;
@@ -1211,29 +1208,51 @@
 @media (min-width: 767px) and (max-width: 1024px) {
 
   main {
-    margin-top: 0;
+    margin-top: 6rem;
   }
 
+  /* CSS */
   .home-section {
     display: flex;
-    justify-content: center !important;
+    flex-direction: column-reverse;
+    align-items: center;
   }
-
 
   .home-section .two {
-    display: none !important;
+    display: flex;
+    justify-content: center;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
   }
+
+  .home-section .two img {
+    height: 9rem;
+  }
+
 
   /* CSS */
   .home-section .one {
     padding-bottom: 20px;
-    margin-top: 120px;
+    margin-top: 4rem;
     padding-left: 0;
     padding-right: 0;
-    width: 80%;
+    width: 70%;
     font-family: 'Rubik', sans-serif !important;
+
     /* background: red; */
   }
+
+  .home-section .one div:nth-child(2) h1 {
+    overflow: hidden !important;
+    margin-top: 2rem;
+  }
+  
+  .home-section .one div:nth-child(2) p {
+    width: 100% !important;
+    margin-top: 2rem;
+    overflow: hidden !important;
+  }
+
 
   .home-section .two {
     /* background: yellow; */
@@ -1267,6 +1286,8 @@
     text-align: center;
     width: 100%;
     padding: 0 !important;
+    overflow: hidden !important;
+
   }
 
   .about-section .two {
@@ -1295,6 +1316,10 @@
     padding: 10px !important;
     display: flex;
     justify-items: center;
+  }
+
+  .services-section .services-card .card-img {
+    overflow: hidden !important;
   }
 
   .nameTwoLine,
@@ -1326,10 +1351,75 @@
 
   .project-section .listProject .cardProject {
     width: 100%;
+    overflow: hidden !important;
+  }
+
+  .project-section .listProject .cardProject h4 {
+    overflow: hidden !important;
+
   }
 
   .project-section .btnProj {
     padding: 20px;
+  }
+
+  .about-section .one .about-button-social,
+  .about-section .one .cv {
+    padding: 10px;
+    font-family: 'Rubik', sans-serif !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-section .two {
+    margin-top: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .about-section .two .nameLine {
+    height: 32px;
+  }
+
+  .about-section .two p {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+
+  .about-section .two .listSkill {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+  }
+
+  .about-section .two .listSkill li {
+    color: var(--whiteShades);
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+
+  .about-section .two .listSkill li::before {
+    font-size: 12px;
+    line-height: 32px;
+    color: var(--green);
+    margin-right: 16px;
+  }
+
+  .nameLine {
+    height: 20px;
+    overflow-y: hidden;
+  }
+
+  .nameLine p,
+  .nameTwoLine p {
+    font-size: 14px !important;
+  }
+
+  .nameLine p::after {
+    flex: 0.120;
+    height: 1.2px;
   }
 
 
@@ -1369,21 +1459,30 @@
     display: none;
   }
 
+  .contact-section .two .form .form-input {
+    /*background: red;*/
+    /*height: 80px;*/
+    /*background: red;*/
+
+  }
 
   .contact-section .two .form-input input,
   .contact-section .two .form-input textarea
   {
+      height: 90% !important;
+      overflow: hidden;
       padding-right: 0 !important;
       padding-left: 18px !important;
   }
 
   .contact-section .two .form .form-input textarea {
     padding-bottom: 0 !important;
-    height: 8rem;
+    height: 9rem !important;
   }
 
   .contact-section .two .form .text-area {
-    height: 10rem !important;
+    height: 11rem !important;
+    overflow: hidden;
   }
 
   .contact-section .two .form-submit {
@@ -1396,16 +1495,17 @@
 
   /* Portfolio */
   .section-portfolio {
-    padding-left: 6%;
+    padding-left: 0;
     width: 100%;
   }
 
   .section-portfolio .titleSection {
+    overflow: hidden !important;
     margin-top: 7%;
     margin-left: 0;
     margin-right: 0;
     /* background: red; */
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   .portfolio-list {
@@ -1416,6 +1516,13 @@
     border-radius: 20px;
     margin-bottom: 50px;
     display: flex;
+  }
+
+  .portfolio-list .body-portfolio h2,
+  .portfolio-list .body-portfolio h3,
+  .portfolio-list .body-portfolio p
+  {
+    overflow: hidden !important;
   }
 }
 
