@@ -150,7 +150,7 @@ class RightSide extends React.Component {
                 onChange={this.onEmailChange.bind(this)}
               />
             </div>
-            <div className='form-input'>
+            <div className='form-input text-area'>
               <img src={logoPencil} alt='' srcset='' />
               <textarea
                 cols='100'
