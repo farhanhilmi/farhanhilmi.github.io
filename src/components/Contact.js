@@ -156,7 +156,7 @@ class RightSide extends React.Component {
                 cols='100'
                 id=''
                 name='message'
-                placeholder='Tell me about yur project or anything you want to ask'
+                placeholder='Tell me about your project or anything you want to ask'
                 value={this.state.message}
                 onChange={this.onMessageChange.bind(this)}
               ></textarea>

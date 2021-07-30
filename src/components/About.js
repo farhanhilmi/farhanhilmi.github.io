@@ -73,9 +73,9 @@ const RightSide = () => {
             <li>ReactJS</li>
             <li>MongooDB</li>
             <li>MySQL</li>
-            <li>Flutter</li>
+            <li>Express.js</li>
+            <li>Django</li>
             <li>Figma</li>
-            <li>Adobe XD</li>
           </ul>
         </div>
       </div>
