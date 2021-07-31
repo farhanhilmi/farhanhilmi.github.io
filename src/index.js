@@ -7,19 +7,19 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Portfolio from './components/Portfolio';
+import PortfolioDetail from './components/PortfolioDetail';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      {/* <App /> */}
       <Switch>
-        {/* <Route exact path='/'>
-          <Products />
-        </Route> */}
         <Route exact path='/'>
           <App />
         </Route>
-        <Route path='/portfolio'>
+        <Route path='/portfolio/:id'>
+          <PortfolioDetail />
+        </Route>
+        <Route exact path='/portfolio'>
           <Portfolio />
         </Route>
       </Switch>

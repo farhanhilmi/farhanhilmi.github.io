@@ -115,18 +115,14 @@ const NavBar = () => {
     if (checkBoxState) {
       document.getElementsByTagName('header')[0].className = 'nav-normal';
       document.querySelector('#nav-check').checked = false;
-
-      console.log('Buka');
     }
   };
 
   const checkNav = () => {
     if (document.querySelector('#nav-check').checked) {
       document.getElementsByTagName('header')[0].className = 'nav-mobile';
-      console.log('yees');
     } else {
       document.getElementsByTagName('header')[0].className = 'nav-normal';
-      console.log('dadad noo');
     }
   };
 
@@ -139,15 +135,15 @@ const NavBar = () => {
         </LinkPage>
       </h3>
       <div class='nav-btn'>
-        <label for='nav-check'>
+        <label htmlFor='nav-check'>
           <span></span>
           <span></span>
           <span></span>
         </label>
       </div>
-      {location.pathname === '/portfolio'
-        ? NavItemPortfolio(closeNav)
-        : NavItemHome(closeNav)}
+      {location.pathname === '/'
+        ? NavItemHome(closeNav)
+        : NavItemPortfolio(closeNav)}
     </nav>
   );
 };

@@ -1,16 +1,24 @@
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 import NavBar from './NavBar';
 
 import '../assets/css/App.css';
 import '../assets/css/mediaQuery.css';
 
-import projectItems from '../projectData';
+import projectData from '../projectData';
 import Contact from './Contact';
 
-const ProjectItem = ({ title, img, tools, description }) => {
+const ProjectItem = ({ id, title, img, tools, description }) => {
+  const history = useHistory();
+  const detailProjHandler = (id) => {
+    const project = projectData.filter((proj) => proj.id === id);
+    history.push(`/portfolio/${project[0].id}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div className='portfolio-list'>
+    <div className='portfolio-list' onClick={() => detailProjHandler(id)}>
       <div className='img-portfolio'>
         <img src={img} alt='' />
       </div>
@@ -39,10 +47,11 @@ const Portfolio = () => {
       <main style={{ width: '100%' }}>
         <section className='section-portfolio'>
           <h1 className='titleSection'>Projects I've worked on</h1>
-          {projectItems.map((project) => {
+          {projectData.map((project) => {
             return (
               <ProjectItem
                 key={project.id}
+                id={project.id}
                 title={project.title}
                 img={project.img}
                 tools={project.tools}
