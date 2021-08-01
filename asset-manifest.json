@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.439aea42.chunk.css",
-    "main.js": "/static/js/main.0a3bade7.chunk.js",
-    "main.js.map": "/static/js/main.0a3bade7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2b6238a5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2b6238a5.js.map",
-    "static/js/2.f8f4d246.chunk.js": "/static/js/2.f8f4d246.chunk.js",
-    "static/js/2.f8f4d246.chunk.js.map": "/static/js/2.f8f4d246.chunk.js.map",
-    "static/js/3.840275ca.chunk.js": "/static/js/3.840275ca.chunk.js",
-    "static/js/3.840275ca.chunk.js.map": "/static/js/3.840275ca.chunk.js.map",
+    "main.css": "/static/css/main.19b894a7.chunk.css",
+    "main.js": "/static/js/main.890ebb2d.chunk.js",
+    "main.js.map": "/static/js/main.890ebb2d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.71a3edd0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.71a3edd0.js.map",
+    "static/js/2.7c8389a3.chunk.js": "/static/js/2.7c8389a3.chunk.js",
+    "static/js/2.7c8389a3.chunk.js.map": "/static/js/2.7c8389a3.chunk.js.map",
+    "static/js/3.c40810ec.chunk.js": "/static/js/3.c40810ec.chunk.js",
+    "static/js/3.c40810ec.chunk.js.map": "/static/js/3.c40810ec.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.439aea42.chunk.css.map": "/static/css/main.439aea42.chunk.css.map",
-    "static/js/2.f8f4d246.chunk.js.LICENSE.txt": "/static/js/2.f8f4d246.chunk.js.LICENSE.txt",
+    "static/css/main.19b894a7.chunk.css.map": "/static/css/main.19b894a7.chunk.css.map",
+    "static/js/2.7c8389a3.chunk.js.LICENSE.txt": "/static/js/2.7c8389a3.chunk.js.LICENSE.txt",
     "static/media/chatapp.831ff8ae.png": "/static/media/chatapp.831ff8ae.png",
+    "static/media/findhobby-1.b024264d.png": "/static/media/findhobby-1.b024264d.png",
+    "static/media/findhobby-2.f238de0c.png": "/static/media/findhobby-2.f238de0c.png",
+    "static/media/findhobby-3.61bcbb2e.png": "/static/media/findhobby-3.61bcbb2e.png",
     "static/media/findhobby.2372fed0.png": "/static/media/findhobby.2372fed0.png",
     "static/media/ilustrasi.e711eefb.png": "/static/media/ilustrasi.e711eefb.png",
     "static/media/mealapp.d8d3332e.png": "/static/media/mealapp.d8d3332e.png",
     "static/media/netflixclone.d1779235.png": "/static/media/netflixclone.d1779235.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b6238a5.js",
-    "static/js/2.f8f4d246.chunk.js",
-    "static/css/main.439aea42.chunk.css",
-    "static/js/main.0a3bade7.chunk.js"
+    "static/js/runtime-main.71a3edd0.js",
+    "static/js/2.7c8389a3.chunk.js",
+    "static/css/main.19b894a7.chunk.css",
+    "static/js/main.890ebb2d.chunk.js"
   ]
 }
