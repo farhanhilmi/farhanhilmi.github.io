@@ -9,9 +9,6 @@ import '../assets/css/mediaQuery.css';
 import projectData from '../projectData';
 import Contact from './Contact';
 
-import photos1 from '../assets/img/findhobby-1.png';
-import photos2 from '../assets/img/findhobby-2.png';
-import photos3 from '../assets/img/findhobby-3.png';
 import closeBtn from '../assets/logo/close.png';
 
 const ZoomImg = ({ image }) => {
@@ -30,9 +27,17 @@ const ZoomImg = ({ image }) => {
   );
 };
 
-const ProjectItem = ({ title, img, tools, description }) => {
+const Previews = ({ srcImg, handler }) => {
+  return (
+    <div>
+      <img src={srcImg} alt='' onClick={() => handler(srcImg)} />
+    </div>
+  );
+};
+
+const ProjectItem = ({ title, img, tools, description, previews }) => {
   const [currentImg, setCurrentImg] = useState(img);
-  const [previewImgs, setPreviewImgs] = useState([photos1, photos2, photos3]);
+  const [previewImgs, setPreviewImgs] = useState(previews);
 
   const switchImg = (photos) => {
     const imgIndex = previewImgs.findIndex((item) => item === photos);
@@ -65,64 +70,23 @@ const ProjectItem = ({ title, img, tools, description }) => {
               <p>{tools}</p>
             </div>
             <div className='photos'>
-              <div>
-                <img
-                  src={previewImgs[0]}
-                  alt=''
-                  onClick={() => switchImg(previewImgs[0])}
-                />
-              </div>
-              <div>
-                <img
-                  src={previewImgs[1]}
-                  alt=''
-                  onClick={() => switchImg(previewImgs[1])}
-                />
-              </div>
-              <div>
-                <img
-                  src={previewImgs[2]}
-                  alt=''
-                  onClick={() => switchImg(previewImgs[2])}
-                />
-              </div>
+              {previewImgs.map((imgItem) => {
+                return (
+                  <Previews
+                    key={imgItem}
+                    srcImg={imgItem}
+                    handler={switchImg}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
 
         <div className='description-portfolio'>
           <h3>Description</h3>
-          <p>
-            Platform to accommodate people who have interests or hobbies but do
-            not have a supportive environment then on these platforms they can
-            get together. developed using Django on the backend, the database
-            using MySQL, and the front-end using Vanilla JavaScript &amp;
-            Bootstrap Platform to accommodate people who have interests or
-            hobbies but do not have a supportive environment then on these
-            platforms they can get together. developed using Django on the
-            backend, the database using MySQL, and the front-end using Vanilla
-            JavaScript &amp; Bootstrap Platform to accommodate people who have
-            interests or hobbies but do not have a supportive environment then
-            on these platforms they can get together. developed using Django on
-            the backend, the database using MySQL, and the front-end using
-            Vanilla JavaScript &amp; Bootstrap.
-            <br />
-            <br />
-            Platform to accommodate people who have interests or hobbies but do
-            not have a supportive environment then on these platforms they can
-            get together. developed using Django on the backend, the database
-            using MySQL, and the front-end using Vanilla JavaScript &amp;
-            Bootstrap Platform to accommodate people who have interests or
-            hobbies but do not have a supportive environment then on these
-            platforms they can get together. developed using Django on the
-            backend, the database using MySQL, and the front-end using Vanilla
-            JavaScript &amp; Bootstrap Platform to accommodate people who have
-            interests or hobbies but do not have a supportive environment then
-            on these platforms they can get together. developed using Django on
-            the backend, the database using MySQL, and the front-end using
-            Vanilla JavaScript &amp; Bootstrap
-          </p>
-          <button
+          <p>{description}</p>
+          {/* <button
             className='btn'
             onClick={() =>
               window.open(
@@ -133,7 +97,7 @@ const ProjectItem = ({ title, img, tools, description }) => {
             }
           >
             <i className='fab fa-github fa-lg'></i>Github Repository
-          </button>
+          </button> */}
         </div>
       </div>
     </Fragment>
@@ -158,6 +122,7 @@ const PortfolioDetail = () => {
             img={project[0].img}
             tools={project[0].tools}
             description={project[0].description}
+            previews={project[0].previews}
           />
           {/* <h2 class='tagline'>Many amazing things are coming</h2> */}
         </section>

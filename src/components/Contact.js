@@ -90,7 +90,6 @@ class RightSide extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
     emailjs
       .sendForm(
         emailjsData.serviceID,
@@ -106,6 +105,7 @@ class RightSide extends React.Component {
           this.resetForm();
         },
         (error) => {
+          alert('Error');
           console.log(error.text);
         },
       );
