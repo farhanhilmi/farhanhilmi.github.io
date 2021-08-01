@@ -150,7 +150,7 @@ const PortfolioDetail = () => {
         <NavBar />
       </header>
       <main style={{ width: '100%' }}>
-        <section className='section-portfolio'>
+        <section className='section-portfolio section-detail-proj'>
           {/* <h1 className='titleSection'>Projects I've worked on Detail</h1> */}
           <ProjectItem
             key={project[0].id}
