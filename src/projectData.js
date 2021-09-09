@@ -1,57 +1,71 @@
-import imgMeal from './assets/img/mealapp.png';
-import imgMeal1 from './assets/img/mealapp-1.png';
-import imgMeal2 from './assets/img/mealapp-2.png';
+import imgMeal from "./assets/img/mealapp.png";
+import imgMeal1 from "./assets/img/mealapp-1.png";
+import imgMeal2 from "./assets/img/mealapp-2.png";
 
-import imgNetflix from './assets/img/netflixclone.png';
-import imgNetflix1 from './assets/img/netflixclone-1.png';
-import imgNetflix2 from './assets/img/netflixclone-2.png';
-import imgNetflix3 from './assets/img/netflixclone-3.png';
+import imgNetflix from "./assets/img/netflixclone.png";
+import imgNetflix1 from "./assets/img/netflixclone-1.png";
+import imgNetflix2 from "./assets/img/netflixclone-2.png";
+import imgNetflix3 from "./assets/img/netflixclone-3.png";
 
-import imgHobby from './assets/img/findhobby.png';
-import imgHobby1 from './assets/img/findhobby-1.png';
-import imgHobby2 from './assets/img/findhobby-2.png';
-import imgHobby3 from './assets/img/findhobby-3.png';
+import imgHobby from "./assets/img/findhobby.png";
+import imgHobby1 from "./assets/img/findhobby-1.png";
+import imgHobby2 from "./assets/img/findhobby-2.png";
+import imgHobby3 from "./assets/img/findhobby-3.png";
 
-import imgChat from './assets/img/chatapp.png';
-import imgChat1 from './assets/img/chatapp-1.png';
-import imgChat2 from './assets/img/chatapp-2.png';
+import imgChat from "./assets/img/chatapp.png";
+import imgChat1 from "./assets/img/chatapp-1.png";
+import imgChat2 from "./assets/img/chatapp-2.png";
+
+import imgMeetingLink from "./assets/img/Meeting links 3.png";
+import imgMeetingLink1 from "./assets/img/Meeting links 1.png";
+import imgMeetingLink2 from "./assets/img/Meeting links 2.png";
+import imgMeetingLink3 from "./assets/img/Meeting links 4.png";
 
 const projectItems = [
   {
     id: 1,
-    title: 'Meal App SPA',
+    title: "Meal App SPA",
     img: imgMeal,
-    tools: 'JavaScript, Bootstrap, Webpack',
+    tools: "JavaScript, Bootstrap, Webpack",
     description:
-      'Single Page Application based platform to find all kinds of food around the world you are looking for, developed using Bootstrap, Vanilla JavaScript and Webpack and also take API from themealdb.',
+      "Single Page Application based platform to find all kinds of food around the world you are looking for, developed using Bootstrap, Vanilla JavaScript and Webpack and also take API from themealdb.",
     previews: [imgMeal1, imgMeal2],
   },
   {
     id: 2,
-    title: 'Find Hobby',
+    title: "Find Hobby",
     img: imgHobby,
-    tools: 'Python, Django, MySQL, JavaScript, Bootstrap',
+    tools: "Python, Django, MySQL, JavaScript, Bootstrap",
     description:
-      'Platform to accommodate people who have interests or hobbies but do not have a supportive environment then on these platforms they can get together. developed using Django on the backend, the database using MySQL, and the front-end using Vanilla JavaScript & Bootstrap',
+      "Platform to accommodate people who have interests or hobbies but do not have a supportive environment then on these platforms they can get together. developed using Django on the backend, the database using MySQL, and the front-end using Vanilla JavaScript & Bootstrap",
     previews: [imgHobby1, imgHobby2, imgHobby3],
   },
   {
     id: 3,
-    title: 'Netflix Clone ReactJS',
+    title: "Netflix Clone ReactJS",
     img: imgNetflix,
-    tools: 'JavaScript, ReactJS, Bootstrap, Firebase',
+    tools: "JavaScript, ReactJS, Bootstrap, Firebase",
     description:
-      'A clone website application from the Netflix website that is made as close as possible to the original, in application development using ReactJS as a front-end tool and also with the Bootstrap framework and API from TMDB',
+      "A clone website application from the Netflix website that is made as close as possible to the original, in application development using ReactJS as a front-end tool and also with the Bootstrap framework and API from TMDB",
     previews: [imgNetflix1, imgNetflix2, imgNetflix3],
   },
   {
     id: 4,
-    title: 'Chat App',
+    title: "Chat App",
     img: imgChat,
-    tools: 'JavaScript, CSS, Bootstrap',
+    tools: "JavaScript, CSS, Bootstrap",
     description:
-      'A website-based chat UI application by applying a glass design. The application developed is still in the UI or front-end stage using Vanilla JavaScript and Bootstrap CSS',
+      "A website-based chat UI application by applying a glass design. The application developed is still in the UI or front-end stage using Vanilla JavaScript and Bootstrap CSS",
     previews: [imgChat1, imgChat2],
+  },
+  {
+    id: 5,
+    title: "Meeting Link Extension",
+    img: imgMeetingLink,
+    tools: "JavaScript, CSS",
+    description:
+      "Extension to save your link meeting links so they can be easily managed and accessed in your browser. Make it easy for you with one click directly to your meeting platform",
+    previews: [imgMeetingLink1, imgMeetingLink2, imgMeetingLink3],
   },
 ];
 
